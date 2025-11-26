@@ -11,32 +11,63 @@ Install:
 2. PostgreSQL Setup
 
 Open Postgres:
-```psql -d postgres```
-
-```CREATE DATABASE graph;```
-```\c graph;```
+```sh
+psql -d postgres
+```
+```sh
+CREATE DATABASE graph;
+```
+```sh
+\c graph;
+```
 
 Create tables:
 
+```sh
+CREATE TABLE nodes (
+  id SERIAL PRIMARY KEY,
+  type TEXT NOT NULL,
+  label TEXT NOT NULL,
+  metadata JSONB,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE edges (
+  id SERIAL PRIMARY KEY,
+  source INTEGER REFERENCES nodes(id),
+  target INTEGER REFERENCES nodes(id),
+  relation TEXT NOT NULL,
+  metadata JSONB,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+```
 
 4. Backend Setup (server)
 4.1 Install Node deps
 
+```sh
 cd server
 npm install
+```
 
 4.2 Install Python deps
+```sh
 pip3 install pymupdf
+```
 
 4.3 Environment variables
 
 Create server/.env:
+```sh
 DATABASE_URL=postgres://YOUR_USERNAME@localhost:5432/graph
 OPENAI_API_KEY=your_openai_api_key_here
+```
 
 4.4 Run the backend
+```sh
 cd server
 npm run dev
+```
 
 Backend runs on:
 http://localhost:3000
@@ -47,18 +78,24 @@ Place PDFs in:
 knowledge-graph/papers/
 papers/3d_gaussian_splatting_original.pdf
 
+```sh
 curl -X POST http://localhost:3000/ingest \
   -H "Content-Type: application/json" \
   -d '{"filePath": "papers/3d_gaussian_splatting_original.pdf"}'
+```
 
 6. Frontend Setup (frontend)
 6.1 Install deps
 
+```sh
 cd frontend
 npm install
+```
 
 6.2 Run frontend
+```sh
 npm run dev
+```
 
 Frontend runs on (usually):
 http://localhost:3001

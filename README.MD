@@ -2,9 +2,9 @@
 
 # Install:
 
-- Node.js (>= 18)
+- Node.js 
 - npm
-- Python 3 (>= 3.8)
+- Python 3
 - PostgreSQL running locally
 - OpenAI API key
 

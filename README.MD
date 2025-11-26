@@ -1,6 +1,6 @@
 ## 1. Prerequisites
 
-Install:
+# Install:
 
 - Node.js (>= 18)
 - npm
@@ -8,9 +8,9 @@ Install:
 - PostgreSQL running locally
 - OpenAI API key
 
-2. PostgreSQL Setup
+# 2. PostgreSQL Setup
 
-Open Postgres:
+# Open Postgres:
 ```sh
 psql -d postgres
 ```
@@ -21,7 +21,7 @@ CREATE DATABASE graph;
 \c graph;
 ```
 
-Create tables:
+# Create tables:
 
 ```sh
 CREATE TABLE nodes (
@@ -42,7 +42,7 @@ CREATE TABLE edges (
 );
 ```
 
-4. Backend Setup (server)
+# 4. Backend Setup (server)
 # 4.1 Install Node deps
 
 ```sh
@@ -72,7 +72,7 @@ npm run dev
 Backend runs on:
 http://localhost:3000
 
-5. Add Papers & Ingest
+# 5. Add Papers & Ingest
 
 Place PDFs in:
 knowledge-graph/papers/
@@ -84,7 +84,7 @@ curl -X POST http://localhost:3000/ingest \
   -d '{"filePath": "papers/3d_gaussian_splatting_original.pdf"}'
 ```
 
-6. Frontend Setup (frontend)
+# 6. Frontend Setup (frontend)
 # 6.1 Install deps
 
 ```sh

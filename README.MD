@@ -43,19 +43,19 @@ CREATE TABLE edges (
 ```
 
 4. Backend Setup (server)
-4.1 Install Node deps
+# 4.1 Install Node deps
 
 ```sh
 cd server
 npm install
 ```
 
-4.2 Install Python deps
+# 4.2 Install Python deps
 ```sh
 pip3 install pymupdf
 ```
 
-4.3 Environment variables
+# 4.3 Environment variables
 
 Create server/.env:
 ```sh
@@ -63,7 +63,7 @@ DATABASE_URL=postgres://YOUR_USERNAME@localhost:5432/graph
 OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-4.4 Run the backend
+# 4.4 Run the backend
 ```sh
 cd server
 npm run dev
@@ -85,14 +85,14 @@ curl -X POST http://localhost:3000/ingest \
 ```
 
 6. Frontend Setup (frontend)
-6.1 Install deps
+# 6.1 Install deps
 
 ```sh
 cd frontend
 npm install
 ```
 
-6.2 Run frontend
+# 6.2 Run frontend
 ```sh
 npm run dev
 ```

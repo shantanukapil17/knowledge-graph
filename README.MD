@@ -84,7 +84,7 @@ curl -X POST http://localhost:3000/ingest \
   -d '{"filePath": "papers/3d_gaussian_splatting_original.pdf"}'
 ```
 
-# 6. Frontend Setup (frontend)
+# 6. Frontend Setup:
 # 6.1 Install deps
 
 ```sh

@@ -105,4 +105,3 @@ Backend: open http://localhost:3000/graph/full → see JSON with nodes and edges
 
 Frontend: open http://localhost:3001 → see interactive graph of papers + concepts
 
-That’s it — this is all you need to set up and run the project.

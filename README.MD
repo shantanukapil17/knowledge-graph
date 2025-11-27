@@ -97,8 +97,7 @@ npm install
 npm run dev
 ```
 
-Frontend runs on (usually):
-http://localhost:3001
+Frontend runs on: http://localhost:3001
 
 7. Quick Verify
 
